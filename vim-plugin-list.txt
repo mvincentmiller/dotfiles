@@ -1,0 +1,8 @@
+cua-mode.vim
+delimitMate
+fzf.vim
+goyo.vim
+lightline.vim
+nerdtree
+vim-monochrome
+vim-polyglot
