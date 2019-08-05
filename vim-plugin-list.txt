@@ -2,6 +2,7 @@ cua-mode.vim
 delimitMate
 fzf.vim
 goyo.vim
+lightline-bufferline
 lightline.vim
 nerdtree
 vim-monochrome
