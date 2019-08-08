@@ -151,4 +151,5 @@ cd ~/Development/dotfiles
 git add --all
 git commit -m 'automatic backup'
 git push origin master
-cd ~/Development 
+cd ~/Development
+clear
