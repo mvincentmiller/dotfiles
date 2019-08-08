@@ -131,8 +131,24 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-cd Development/bulu
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+FILE=~/Development/dotfiles/vim-plugin-list.txt
+if test -f "$FILE"; then
+    echo "saving vim-plugin-list.txt ..."
+    rm $FILE
+    ls -a ~/.vim/bundle > ~/Development/dotfiles/vim-plugin-list.txt
+    cat ~/Development/dotfiles/vim-plugin-list.txt
+fi
+
+cp ~/.bashrc ~/Development/dotfiles/.bashrc
+cp ~/.vimrc ~/Development/dotfiles/.vimrc
+
+cd ~/Development/dotfiles 
+git add --all
+git commit -m 'automatic backup'
+git push origin master
+cd ~/Development 

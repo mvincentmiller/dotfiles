@@ -1,3 +1,6 @@
+.
+..
+coc.nvim
 cua-mode.vim
 delimitMate
 fzf.vim

@@ -47,3 +47,18 @@ au FocusLost,WinLeave * :silent! w
 
 au CursorHold,CursorHoldI * checktime
 
+" open buffers
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+
+let g:lightline                  = {}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+
+autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
+
+" refresh nerd tree (eventually, lolz)
+autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
+
