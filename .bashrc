@@ -134,7 +134,13 @@ export NVM_DIR="$HOME/.nvm"
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
 
 
+## Fast Fuzzy Search 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+## composer, put here for gh-dashboard
+export PATH="~/.composer/vendor/bin:$PATH"
+
+## Configuration Backup
 
 FILE=~/Development/dotfiles/vim-plugin-list.txt
 if test -f "$FILE"; then
