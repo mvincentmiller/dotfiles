@@ -10,3 +10,4 @@ lightline.vim
 nerdtree
 vim-monochrome
 vim-polyglot
+vim-prettier
