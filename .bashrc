@@ -159,3 +159,5 @@ git commit -m 'automatic backup'
 git push origin master
 cd ~/Development
 clear
+
+nvm use v11.10.1
