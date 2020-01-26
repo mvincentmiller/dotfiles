@@ -157,6 +157,7 @@ cd ~/Development/dotfiles
 git add --all
 git commit -m 'automatic backup'
 git push origin master
+cd -
 
 ## Embedded Development
 export PATH=~/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
