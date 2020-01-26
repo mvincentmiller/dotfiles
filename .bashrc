@@ -159,7 +159,7 @@ git commit -m 'automatic backup'
 git push origin master
 cd ~/Development
 
-MODDABLE=~/Development/moddable
+MODDABLE=~/Development/wireless-wednesday/moddable
 export MODDABLE
 
 nvm use v11.10.1
