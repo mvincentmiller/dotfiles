@@ -48,7 +48,7 @@ au FocusLost,WinLeave * :silent! w
 au CursorHold,CursorHoldI * checktime
 
 " refresh nerd tree (eventually, lolz)
-autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
+" autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
 
 set hidden  " allow buffer switching without saving
 set showtabline=2  " always show tabline
