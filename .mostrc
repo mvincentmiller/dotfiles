@@ -1,0 +1,7 @@
+ 
+% Color settings
+
+color normal lightgray black
+color status yellow blue
+color underline brightgreen black
+color overstrike brightred black
