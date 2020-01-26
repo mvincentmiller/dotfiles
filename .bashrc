@@ -159,6 +159,7 @@ git commit -m 'automatic backup'
 git push origin master
 cd ~/Development
 
+export PATH=/home/mvm/Development/wireless-wednesday/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 MODDABLE=~/Development/wireless-wednesday/moddable
 export MODDABLE
 export PATH=$PATH:$MODDABLE/build/bin/lin/release
