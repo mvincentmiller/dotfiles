@@ -157,11 +157,13 @@ cd ~/Development/dotfiles
 git add --all
 git commit -m 'automatic backup'
 git push origin master
-cd ~/Development
 
-export PATH=/home/mvm/Development/wireless-wednesday/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
-MODDABLE=~/Development/wireless-wednesday/moddable
+## Embedded Development
+export PATH=~/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
+MODDABLE=~/moddable
 export MODDABLE
 export PATH=$PATH:$MODDABLE/build/bin/lin/release
+ARDUINO=~/Arduino/arduino-1.8.10-linux64
+export ARDUINO
 
 nvm use v11.10.1
