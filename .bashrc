@@ -161,5 +161,6 @@ cd ~/Development
 
 MODDABLE=~/Development/wireless-wednesday/moddable
 export MODDABLE
+export PATH=$PATH:$MODDABLE/build/bin/lin/release
 
 nvm use v11.10.1
