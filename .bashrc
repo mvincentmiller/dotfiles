@@ -66,7 +66,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h:\w\a\]$PS1"
     ;;
 *)
     ;;
@@ -137,11 +137,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # U
 ## Fast Fuzzy Search 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-## composer, put here for gh-dashboard
-export PATH="~/.composer/vendor/bin:$PATH"
-
 ## Configuration Backup
-
 FILE=~/Development/dotfiles/vim-plugin-list.txt
 if test -f "$FILE"; then
     echo "saving vim-plugin-list.txt ..."
