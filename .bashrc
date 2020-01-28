@@ -137,7 +137,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # U
 ## Fast Fuzzy Search 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-#######################
+########################
 ## Configuration Backup
 ########################
 
@@ -149,12 +149,14 @@ if test -f "$FILE"; then
     ls -a ~/.vim/bundle > ~/Development/dotfiles/vim-plugin-list.txt
     cat ~/Development/dotfiles/vim-plugin-list.txt
 fi
-i
 
+## Copy rc files 
+cp ~/.dhexrc ~/Development/dotfiles/.dhexrc
 cp ~/.mostrc ~/Development/dotfiles/.mostrc
 cp ~/.bashrc ~/Development/dotfiles/.bashrc
 cp ~/.vimrc ~/Development/dotfiles/.vimrc
 
+## Commit changes and push, return to directory
 cd ~/Development/dotfiles 
 git add --all
 git commit -m 'automatic backup'
