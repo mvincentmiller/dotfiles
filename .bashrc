@@ -135,7 +135,15 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # U
 
 
 ## Fast Fuzzy Search 
+## https://github.com/junegunn/fzf/wiki/examples
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#find in file 
+
+ fif() {     if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi;     local file;     file="$(rg --max-count=1 --ignore-case --files-with-matches --no-messages "$@" | fzf-tmux +m --preview="rg --ignore-case --pretty --context 10 '"$@"' {}")" && open "$file"; }
+
+
+
 
 ########################
 ## Configuration Backup
