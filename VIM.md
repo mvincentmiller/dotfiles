@@ -1,5 +1,7 @@
 # Vim
 
+---
+
 ## History and overview
 
 ``` Vim was created by Bram Moolenaar in 1991. ```
@@ -35,7 +37,6 @@ vim-polyglot
 
 ### Syntax Highlighting 
 
-- https://freshman.tech/vim-javascript/
 - https://github.com/sheerun/vim-polyglot
 
 ### Code Completion: Conquer of Completion
@@ -59,9 +60,10 @@ vim-polyglot
 ### Tabs vs. Buffers
 
 - https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/
+
 - https://github.com/taohexxx/lightline-buffer
 
-
+  
 
 https://stackoverflow.com/questions/3446320/in-vimv-how-to-map-save-to-ctrl-s
 
