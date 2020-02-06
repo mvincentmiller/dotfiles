@@ -11,3 +11,4 @@ nerdtree
 vim-monochrome
 vim-polyglot
 vim-prettier
+vimtex
