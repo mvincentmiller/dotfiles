@@ -8,6 +8,7 @@ goyo.vim
 lightline-buffer
 lightline.vim
 nerdtree
+ultisnips
 vim-monochrome
 vim-polyglot
 vim-prettier
