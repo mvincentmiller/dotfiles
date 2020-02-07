@@ -164,12 +164,13 @@ cp ~/.mostrc ~/Development/dotfiles/.mostrc
 cp ~/.bashrc ~/Development/dotfiles/.bashrc
 cp ~/.vimrc ~/Development/dotfiles/.vimrc
 
+# convert to chron job?
 ## Commit changes and push, return to directory
-cd ~/Development/dotfiles 
-git add --all
-git commit -m 'automatic backup'
-git push origin master
-cd -
+# cd ~/Development/dotfiles 
+# git add --all
+# git commit -m 'automatic backup'
+# git push origin master
+# cd -
 
 ## Embedded Development
 export PATH=~/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
@@ -179,4 +180,8 @@ export PATH=$PATH:$MODDABLE/build/bin/lin/release
 ARDUINO=~/Arduino/arduino-1.8.10-linux64
 export ARDUINO
 
+
 nvm use v11.10.1
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
