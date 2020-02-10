@@ -125,11 +125,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export QUANDL_KEY='qDzDctYc4QE8vjoPiWSb'
+
+## Node Version Manager
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm use v11.10.1
+
+
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
 
@@ -144,7 +149,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # U
 
 
 
-
 ########################
 ## Configuration Backup
 ########################
@@ -155,7 +159,7 @@ if test -f "$FILE"; then
     echo "saving vim-plugin-list.txt ..."
     rm $FILE
     ls -a ~/.vim/bundle > ~/Development/dotfiles/vim-plugin-list.txt
-    cat ~/Development/dotfiles/vim-plugin-list.txt
+    # cat ~/Development/dotfiles/vim-plugin-list.txt
 fi
 
 ## Copy rc files 
@@ -180,8 +184,10 @@ export PATH=$PATH:$MODDABLE/build/bin/lin/release
 ARDUINO=~/Arduino/arduino-1.8.10-linux64
 export ARDUINO
 
-
-nvm use v11.10.1
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+export PATH=$PATH:/home/mvm/esp32/xtensa-esp32-elf/bin
+export IDF_PATH=/home/mvm/esp32/esp-idf
+. $HOME/esp32/esp-idf/export.sh
+clear
