@@ -30,28 +30,7 @@ Caring for my development environment helps keeps me in a flow. Any time I need 
 
 ## Automatic Backup
 
-Whenever I enter my shell, I check these things and commit.
-
-```bash
-# .bashrc
-
-## Configuration Backup
-FILE=~/Development/dotfiles/vim-plugin-list.txt
-if test -f "$FILE"; then
-    echo "saving vim-plugin-list.txt ..."
-    rm $FILE
-    ls -a ~/.vim/bundle > ~/Development/dotfiles/vim-plugin-list.txt
-    cat ~/Development/dotfiles/vim-plugin-list.txt
-fi
-
-cp ~/.bashrc ~/Development/dotfiles/.bashrc
-cp ~/.vimrc ~/Development/dotfiles/.vimrc
-
-cd ~/Development/dotfiles 
-git add --all
-git commit -m 'automatic backup'
-git push origin master
-cd -
+TODO: chron job
 
 ```
 
